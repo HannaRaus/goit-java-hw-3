@@ -1,9 +1,7 @@
-    public int countBanknotes(int sum) {
-
+class ATM {    
+     public int countBanknotes(int sum) {
         int counter = 0;
-        if (sum % 500 == 0) {
-            counter = sum / 500;
-        } else {
+                        
             counter = sum / 500;
             sum %= 500;
 
@@ -29,6 +27,7 @@
             sum %= 2;//0
 
             counter +=sum;
-        }
+        
         return counter;
     }
+}
