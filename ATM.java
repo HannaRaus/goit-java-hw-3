@@ -1,33 +1,35 @@
 class ATM {    
-     public int countBanknotes(int sum) {
+    public int countBanknotes(int sum) {
         int counter = 0;
-                        
-            counter = sum / 500;
-            sum %= 500;
+        int sumLeft = sum;
 
-            counter += sum / 200;
-            sum %= 200;
+        counter = sumLeft / 500;
 
-            counter += sum / 100;
-            sum %= 100;
+        sumLeft %= 500;
 
-            counter += sum / 50;
-            sum %= 50;
+        counter += sumLeft / 200;
+        sumLeft %= 200;
 
-            counter += sum / 20;
-            sum %= 20;
+        counter += sumLeft / 100;
+        sumLeft %= 100;
 
-            counter += sum / 10;
-            sum %= 10;
+        counter += sumLeft / 50;
+        sumLeft %= 50;
 
-            counter += sum / 5;
-            sum %= 5;
+        counter += sumLeft / 20;
+        sumLeft %= 20;
 
-            counter += sum / 2;//23
-            sum %= 2;//0
+        counter += sumLeft / 10;
+        sumLeft %= 10;
 
-            counter +=sum;
-        
+        counter += sumLeft / 5;
+        sumLeft %= 5;
+
+        counter += sumLeft / 2;
+        sumLeft %= 2;
+
+        counter += sumLeft;
+       
         return counter;
     }
 }
